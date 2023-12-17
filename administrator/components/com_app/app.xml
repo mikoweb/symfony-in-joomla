@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.6" method="upgrade">
+	<name>com_app</name>
+	<creationDate>December 2023</creationDate>
+	<version>1.0.0</version>
+	<description>App Component</description>
+	<administration>
+		<files folder="admin">
+			<filename>app.php</filename>
+			<filename>config.xml</filename>
+		</files>
+		<menu link="option=com_app&amp;task=/">
+			App Component
+		</menu>
+	</administration>
+</extension>
