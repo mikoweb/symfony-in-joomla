@@ -1,4 +1,5 @@
 .idea
+/.htaccess
 /administrator
 !/administrator/components/com_app
 /api
