@@ -4,21 +4,18 @@ defined('_JEXEC') or die;
 
 use App\Container;
 use Joomla\CMS\Application\CMSApplication;
-use Joomla\CMS\Document\Document;
 use Joomla\CMS\Factory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class PlgSystemApp extends JPlugin
 {
     private readonly CMSApplication $app;
-    private readonly Document $document;
     private readonly ContainerInterface $container;
 
     public function __construct(&$subject, $config = [])
     {
         parent::__construct($subject, $config);
         $this->app = Factory::getApplication();
-        $this->document = Factory::getDocument();
     }
 
     public function onAfterInitialise(): void
