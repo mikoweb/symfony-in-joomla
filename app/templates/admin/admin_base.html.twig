@@ -1,0 +1,26 @@
+{% block flashes %}
+    {% for message in flash_bag.get('admin_success') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+    {% for message in flash_bag.get('admin_error') %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block admin_form %}
+    <form {% block admin_form_tag_attributes %}method="get"{% endblock%} class="form" id="adminForm" name="adminForm">
+        {% block admin_content %}{% endblock %}
+        <input name="option" type="hidden" value="{{ request_query.get('option') }}" />
+        <input name="task" type="hidden" value="{{ request_query.get('tast') }}" />
+    </form>
+{% endblock %}
