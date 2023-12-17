@@ -4,5 +4,5 @@ namespace App\Module\Admin\Domain\Constant;
 
 final class MainComponentConstant
 {
-    public const NAME = 'com_app';
+    public const string NAME = 'com_app';
 }
