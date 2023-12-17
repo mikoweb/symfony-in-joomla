@@ -17,6 +17,7 @@
 !/plugins/system/app
 /templates
 /tmp
+/configuration.php
 /htaccess.txt
 /index.php
 /LICENSE.txt
