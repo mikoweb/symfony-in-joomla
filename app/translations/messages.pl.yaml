@@ -1,0 +1,4 @@
+admin:
+    main_component_name: App Component
+    error:
+        btn_text: Strona komponentu
