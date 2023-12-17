@@ -1,0 +1,63 @@
+{% if pagination.pageCount > 1 %}
+    <div class="pagination pagination-toolbar clearfix">
+        <nav role="navigation" aria-label="Paginacja">
+            <ul class="pagination-list">
+                <li{% if pagination.currentPageNumber < 2 %} class="disabled"{% endif %}>
+                    {% if pagination.currentPageNumber < 2 %}
+                        <span>
+                            <span class="icon-backward icon-first" aria-hidden="true"></span>
+                        </span>
+                    {% else %}
+                        <a title="Pierwsza" href="{{ admin_link({'page': 1}) }}">
+                            <span class="icon-backward icon-first" aria-hidden="true"></span>
+                        </a>
+                    {% endif %}
+                </li>
+                <li{% if pagination.currentPageNumber < 2 %} class="disabled"{% endif %}>
+                    {% if pagination.currentPageNumber < 2 %}
+                        <span>
+                            <span class="icon-step-backward icon-previous" aria-hidden="true"></span>
+                        </span>
+                    {% else %}
+                        <a title="Poprzednia" href="{{ admin_link({'page': pagination.currentPageNumber - 1}) }}">
+                            <span class="icon-step-backward icon-previous" aria-hidden="true"></span>
+                        </a>
+                    {% endif %}
+                </li>
+                {% for i in 1..pagination.pageCount %}
+                    {% if i == pagination.currentPageNumber %}
+                        <li class="active">
+                            <span>{{ i }}</span>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ admin_link({'page': i}) }}">{{ i }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                <li{% if pagination.currentPageNumber == pagination.pageCount %} class="disabled"{% endif %}>
+                    {% if pagination.currentPageNumber == pagination.pageCount %}
+                        <span>
+                            <span class="icon-step-forward icon-next" aria-hidden="true"></span>
+                        </span>
+                    {% else %}
+                        <a title="Następna" href="{{ admin_link({'page': pagination.currentPageNumber + 1}) }}">
+                            <span class="icon-step-forward icon-next" aria-hidden="true"></span>
+                        </a>
+                    {% endif %}
+                </li>
+                <li{% if pagination.currentPageNumber == pagination.pageCount %} class="disabled"{% endif %}>
+                    {% if pagination.currentPageNumber == pagination.pageCount %}
+                        <span>
+                            <span class="icon-forward icon-last" aria-hidden="true"></span>
+                        </span>
+                    {% else %}
+                        <a title="Ostatnia" href="{{ admin_link({'page': pagination.pageCount}) }}">
+                            <span class="icon-forward icon-last" aria-hidden="true"></span>
+                        </a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </div>
+{% endif %}
