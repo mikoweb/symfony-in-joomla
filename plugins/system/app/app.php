@@ -5,7 +5,9 @@ defined('_JEXEC') or die;
 use App\Container;
 use Joomla\CMS\Application\CMSApplication;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Uri\Uri;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 
 final class PlgSystemApp extends JPlugin
 {
@@ -23,6 +25,7 @@ final class PlgSystemApp extends JPlugin
         $this->initApp();
         $this->container = Container::get()->getContainer();
         $this->container->get('bootstrap')->bootstrap();
+        $this->handleSiteRouting();
     }
 
     private function initApp(): void
@@ -34,5 +37,30 @@ final class PlgSystemApp extends JPlugin
     private function isSite(): bool
     {
         return $this->app->isClient('site');
+    }
+
+    private function handleSiteRouting(): void
+    {
+        if ($this->isSiteRoute()) {
+            $uri = Uri::getInstance();
+            $uri->parse($uri->getScheme() . '://' . $uri->getHost() . '/index.php?option=com_app');
+        }
+    }
+
+    private function isSiteRoute(): bool
+    {
+        if ($this->isSite()) {
+            $routingLoader = $this->container->get('site')->routingLoader;
+            $request = $routingLoader->getRequest();
+            $urlMatcher = $routingLoader->getMatcher();
+
+            try {
+                $matches = $urlMatcher->match($request->getPathInfo());
+
+                return !empty($matches);
+            } catch (ResourceNotFoundException $exception) {}
+        }
+
+        return false;
     }
 }

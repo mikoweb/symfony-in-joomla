@@ -20,7 +20,7 @@ final readonly class ComponentHandler
         return (bool) ContentHelper::getActions($componentName)->get($action);
     }
 
-    public function handle(): ?Response
+    public function handle(): Response
     {
         try {
             $response = $this->adminRoutingLoader->handleRequest();

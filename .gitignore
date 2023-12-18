@@ -6,6 +6,7 @@
 /cache
 /cli
 /components
+!/components/com_app
 /images
 /includes
 /installation

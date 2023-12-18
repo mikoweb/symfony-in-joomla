@@ -4,8 +4,12 @@
 	<creationDate>December 2023</creationDate>
 	<version>1.0.0</version>
 	<description>App Component</description>
+	<files folder="site">
+		<filename>app.php</filename>
+	</files>
 	<administration>
 		<files folder="admin">
+			<filename>access.xml</filename>
 			<filename>app.php</filename>
 			<filename>config.xml</filename>
 		</files>
