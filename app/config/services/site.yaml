@@ -1,0 +1,13 @@
+services:
+    site:
+        class: App\Module\Service\SiteService
+        public: true
+        autowire: true
+
+    App\Module\Site\Application\Routing\SiteRouter:
+        public: true
+        autowire: true
+
+    site_router:
+        alias: App\Module\Site\Application\Routing\SiteRouter
+        public: true

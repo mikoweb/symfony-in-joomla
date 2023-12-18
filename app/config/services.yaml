@@ -2,6 +2,7 @@ imports:
     - { resource: 'services/autowire.yaml' }
     - { resource: 'services/bootstrap.yaml' }
     - { resource: 'services/admin.yaml' }
+    - { resource: 'services/site.yaml' }
 
 # This file is the entry point to configure your own services.
 # Files in the packages/ subdirectory configure your dependencies.
