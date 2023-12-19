@@ -2,10 +2,10 @@
 
 namespace App\Module\Service;
 
-use App\Module\Admin\Application\Routing\AdminRoutingLoader;
 use App\Module\Core\Application\Translator\TranslatorLoader;
 use App\Module\Core\Application\Twig\TwigLoader;
-use App\Module\Site\Application\Routing\SiteRoutingLoader;
+use App\Module\Joomla\Admin\Application\Routing\AdminRoutingLoader;
+use App\Module\Joomla\Site\Application\Routing\SiteRoutingLoader;
 
 readonly class BootstrapService
 {

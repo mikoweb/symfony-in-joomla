@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Module\Site\Application\Joomla;
+namespace App\Module\Joomla\Site\Application\Joomla;
 
-use App\Module\Site\Application\Routing\SiteRoutingLoader;
+use App\Module\Joomla\Site\Application\Routing\SiteRoutingLoader;
 use Symfony\Component\HttpFoundation\Response;
 
 final readonly class ComponentHandler

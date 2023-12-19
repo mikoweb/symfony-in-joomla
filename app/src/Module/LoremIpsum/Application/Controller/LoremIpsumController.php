@@ -2,7 +2,7 @@
 
 namespace App\Module\LoremIpsum\Application\Controller;
 
-use App\Module\Site\Application\Controller\AbstractSiteController;
+use App\Module\Joomla\Site\Application\Controller\AbstractSiteController;
 use Joomla\CMS\Document\Document;
 use Joomla\CMS\Factory;
 use Symfony\Component\HttpFoundation\Response;

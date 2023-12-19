@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Module\Admin\Application\Twig\Extension;
+namespace App\Module\Joomla\Admin\Application\Twig\Extension;
 
-use App\Module\Admin\Application\Routing\AdminRouter;
+use App\Module\Joomla\Admin\Application\Routing\AdminRouter;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;

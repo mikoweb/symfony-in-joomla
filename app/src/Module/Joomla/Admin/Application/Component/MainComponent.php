@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Module\Admin\Application\Component;
+namespace App\Module\Joomla\Admin\Application\Component;
 
-use App\Module\Admin\Application\Joomla\ComponentHandler;
-use App\Module\Admin\Domain\Constant\MainComponentConstant;
+use App\Module\Joomla\Admin\Application\Joomla\ComponentHandler;
+use App\Module\Joomla\Admin\Domain\Constant\MainComponentConstant;
 use Joomla\CMS\Toolbar\ToolbarHelper;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\Translation\TranslatorInterface;

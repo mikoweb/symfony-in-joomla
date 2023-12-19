@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Module\Admin\Application\Routing;
+namespace App\Module\Joomla\Admin\Application\Routing;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;

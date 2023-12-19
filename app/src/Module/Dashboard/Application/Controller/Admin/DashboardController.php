@@ -2,7 +2,7 @@
 
 namespace App\Module\Dashboard\Application\Controller\Admin;
 
-use App\Module\Admin\Application\Controller\AbstractAdminController;
+use App\Module\Joomla\Admin\Application\Controller\AbstractAdminController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 

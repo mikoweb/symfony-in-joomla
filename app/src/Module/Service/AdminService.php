@@ -2,7 +2,7 @@
 
 namespace App\Module\Service;
 
-use App\Module\Admin\Application\Component\MainComponent;
+use App\Module\Joomla\Admin\Application\Component\MainComponent;
 
 final readonly class AdminService
 {

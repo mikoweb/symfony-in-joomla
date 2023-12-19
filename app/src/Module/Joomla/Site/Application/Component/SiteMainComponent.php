@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Module\Site\Application\Component;
+namespace App\Module\Joomla\Site\Application\Component;
 
-use App\Module\Site\Application\Joomla\ComponentHandler;
+use App\Module\Joomla\Site\Application\Joomla\ComponentHandler;
 use Symfony\Component\HttpFoundation\Response;
 
 final readonly class SiteMainComponent

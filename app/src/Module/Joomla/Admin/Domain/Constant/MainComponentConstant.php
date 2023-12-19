@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Module\Admin\Domain\Constant;
+namespace App\Module\Joomla\Admin\Domain\Constant;
 
 final class MainComponentConstant
 {

@@ -2,8 +2,8 @@
 
 namespace App\Module\Service;
 
-use App\Module\Site\Application\Component\SiteMainComponent;
-use App\Module\Site\Application\Routing\SiteRoutingLoader;
+use App\Module\Joomla\Site\Application\Component\SiteMainComponent;
+use App\Module\Joomla\Site\Application\Routing\SiteRoutingLoader;
 
 final readonly class SiteService
 {

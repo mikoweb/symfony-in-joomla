@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Module\Admin\Application\Joomla;
+namespace App\Module\Joomla\Admin\Application\Joomla;
 
-use App\Module\Admin\Application\Routing\AdminRoutingLoader;
+use App\Module\Joomla\Admin\Application\Routing\AdminRoutingLoader;
 use Joomla\CMS\Helper\ContentHelper;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;

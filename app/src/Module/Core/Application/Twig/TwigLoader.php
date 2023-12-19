@@ -3,7 +3,7 @@
 namespace App\Module\Core\Application\Twig;
 
 use App\Container;
-use App\Module\Admin\Application\Twig\Extension\AdminRouteExtension;
+use App\Module\Joomla\Admin\Application\Twig\Extension\AdminRouteExtension;
 use App\Path;
 use Symfony\Bridge\Twig\Extension\DumpExtension;
 use Symfony\Bridge\Twig\Extension\FormExtension;
@@ -14,9 +14,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
+use Twig\Loader\FilesystemLoader;
 use Twig\RuntimeLoader\FactoryRuntimeLoader;
 
 final class TwigLoader
