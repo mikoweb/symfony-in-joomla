@@ -4,10 +4,10 @@ services:
         public: true
         autowire: true
 
-    App\Module\Site\Application\Routing\SiteRouter:
+    App\Module\Joomla\Site\Application\Routing\SiteRouter:
         public: true
         autowire: true
 
     site_router:
-        alias: App\Module\Site\Application\Routing\SiteRouter
+        alias: App\Module\Joomla\Site\Application\Routing\SiteRouter
         public: true

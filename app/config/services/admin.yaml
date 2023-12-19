@@ -4,10 +4,10 @@ services:
         public: true
         autowire: true
 
-    App\Module\Admin\Application\Routing\AdminRouter:
+    App\Module\Joomla\Admin\Application\Routing\AdminRouter:
         public: true
         autowire: true
 
     admin_router:
-        alias: App\Module\Admin\Application\Routing\AdminRouter
+        alias: App\Module\Joomla\Admin\Application\Routing\AdminRouter
         public: true
