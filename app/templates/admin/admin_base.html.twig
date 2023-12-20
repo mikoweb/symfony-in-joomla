@@ -21,6 +21,6 @@
     <form {% block admin_form_tag_attributes %}method="get"{% endblock%} class="form" id="adminForm" name="adminForm">
         {% block admin_content %}{% endblock %}
         <input name="option" type="hidden" value="{{ request_query.get('option') }}" />
-        <input name="task" type="hidden" value="{{ request_query.get('tast') }}" />
+        <input name="task" type="hidden" value="{{ request_query.get('task') }}" />
     </form>
 {% endblock %}
