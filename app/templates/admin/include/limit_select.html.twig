@@ -1,0 +1,7 @@
+{% set limitList = [5, 10, 15, 20, 25, 30, 50, 100, 200, 500] %}
+<select name="limit" class="input-mini" onchange="this.form.submit();">
+    <option value="">Limit</option>
+    {% for limit in limitList %}
+        <option value="{{ limit }}"{% if limit == request_query.get('limit', 100) %} selected{% endif %}>{{ limit }}</option>
+    {% endfor %}
+</select>
