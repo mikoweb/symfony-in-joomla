@@ -80,6 +80,6 @@ final class SiteRoutingLoader
      */
     public function handleRequest(): Response
     {
-        return $this->kernel->handle($this->request);
+        return $this->kernel->handle($this->request, catch: false);
     }
 }
