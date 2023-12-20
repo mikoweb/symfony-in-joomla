@@ -1,4 +1,8 @@
 {% if pagination.pageCount > 1 %}
+    {% set adminLinkParams = {
+        'limit': request_query.get('limit', 100),
+        'sort': request_query.get('sort')
+    } %}
     <div class="pagination pagination-toolbar clearfix">
         <nav role="navigation" aria-label="Paginacja">
             <ul class="pagination-list">
@@ -8,7 +12,7 @@
                             <span class="icon-backward icon-first" aria-hidden="true"></span>
                         </span>
                     {% else %}
-                        <a title="Pierwsza" href="{{ admin_link({'page': 1}) }}">
+                        <a title="Pierwsza" href="{{ admin_link(adminLinkParams|merge({'page': 1})) }}">
                             <span class="icon-backward icon-first" aria-hidden="true"></span>
                         </a>
                     {% endif %}
@@ -19,7 +23,7 @@
                             <span class="icon-step-backward icon-previous" aria-hidden="true"></span>
                         </span>
                     {% else %}
-                        <a title="Poprzednia" href="{{ admin_link({'page': pagination.currentPageNumber - 1}) }}">
+                        <a title="Poprzednia" href="{{ admin_link(adminLinkParams|merge({'page': pagination.currentPageNumber - 1})) }}">
                             <span class="icon-step-backward icon-previous" aria-hidden="true"></span>
                         </a>
                     {% endif %}
@@ -31,7 +35,7 @@
                         </li>
                     {% else %}
                         <li>
-                            <a href="{{ admin_link({'page': i}) }}">{{ i }}</a>
+                            <a href="{{ admin_link(adminLinkParams|merge({'page': i})) }}">{{ i }}</a>
                         </li>
                     {% endif %}
                 {% endfor %}
@@ -41,7 +45,7 @@
                             <span class="icon-step-forward icon-next" aria-hidden="true"></span>
                         </span>
                     {% else %}
-                        <a title="Następna" href="{{ admin_link({'page': pagination.currentPageNumber + 1}) }}">
+                        <a title="Następna" href="{{ admin_link(adminLinkParams|merge({'page': pagination.currentPageNumber + 1})) }}">
                             <span class="icon-step-forward icon-next" aria-hidden="true"></span>
                         </a>
                     {% endif %}
@@ -52,7 +56,7 @@
                             <span class="icon-forward icon-last" aria-hidden="true"></span>
                         </span>
                     {% else %}
-                        <a title="Ostatnia" href="{{ admin_link({'page': pagination.pageCount}) }}">
+                        <a title="Ostatnia" href="{{ admin_link(adminLinkParams|merge({'page': pagination.pageCount})) }}">
                             <span class="icon-forward icon-last" aria-hidden="true"></span>
                         </a>
                     {% endif %}
