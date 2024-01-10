@@ -37,7 +37,7 @@ final class TwigLoader
         if (!$this->load) {
             $loader = new FilesystemLoader([
                 Path::getTemplatesPath(),
-                Path::getVendorPath('symfony/twig-bridge/Resources/views/Form')
+                Path::getVendorPath('symfony/twig-bridge/Resources/views/Form'),
             ], Path::getAppPath());
             $debug = Container::get()->getParameter('twig_debug');
             $this->twig = new Environment($loader, [
